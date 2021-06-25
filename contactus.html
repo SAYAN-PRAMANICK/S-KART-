@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <link rel = "icon" href = "img/logo.jpg" 
+        type = "image/x-icon">
+    <title>S-kart | Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+
+    <!--------------------------------------------TOP NAVIGATION BAR------------------------------------------------------>
+    <nav class="nav nav_top">
+        <div id="rotator">
+            <a href="index.html">
+                <img class="alignnone" id="logoimg" src="img/logo.jpg" height="100px" width="auto"/>
+            </a>
+        </div>
+        <div class="cart">
+            <a href="index.html"><span>-KART</span></a>
+        </div>
+        <div class="nav_side">
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="#">Blogs</a>
+            <a href="contactus.html">Contact</a>
+            <a href="#">Login/Register</a>
+        </div>
+    </nav>
+
+
+    <!----------------------------------------------Contact Us--------------------------------------------------------------->
+    <div class="contact_container">
+        <h2>Contact Us</h2>
+        <div class="g_map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471220.
+            56305731717!2d88.0495333407064!3d22.67575208848934!2m3!1f0!2f0!3f0!3m2!1i1
+            024!2i768!4f13.1!3m3!1m2!1s0x39f882db4908f667%3A0x43e330e68f6c2cbc!2sKolka
+            ta%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1624643777804!5m2!1sen!2sin" 
+            width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+        <div class="contact_content">
+            <p><b>Address: Kolkata, India</b></p>
+            <p><b>Call: +918837657497</b></p>
+            <p><b>Mail: sayanpramanickx@gmail.com</b></p>
+        </div>
+    </div>
+
+
+    <!----------------------------------------------FEEDBACK--------------------------------------------------------------->
+    <div class="feed">
+        <h2>Write a riview</h2>
+        <div class="feed_form">
+            <form name="formsubmit" method="POST">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email ID" placeholder="Email ID"><br>
+                <input type="number" name="Contact Number" placeholder="Contact Number"><br>
+                <textarea name="Review" id="" cols="7" rows="5" placeholder="Write your review"></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-----------------------------------------------FOOTER----------------------------------------------------------------->
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="img/logo.jpg" height="100px" width="auto"></a>
+        </div>
+        <div class="pages">
+            <h3>Pages</h3>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="#">Blogs</a>
+            <a href="contactus.html">Contact</a>
+            <a href="#">Login/Register</a>
+        </div>
+        <div class="doc">
+            <h3>Documents</h3>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms Of Use</a>
+            <a href="">Refund Policy</a>
+        </div>
+        <div class="social" style="z-index: 4;">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/profile.php?id=100009201341106" target="_black"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/sayan-pro-id/" target="_black"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/supa_sayan/" target="_black"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/SAYANPR20056156" target="_black"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <a href="https://wa.me/+918837657497" target="_black"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel: +918837657497"><i class="fas fa-phone"></i></a>
+            <a href="mailto: sayanpramanickx@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+        <hr>
+        <p>Copyright &copy; 2021 S-kart All rights reserved</p>
+    </footer>
+
+
+
+
+    <!-------------------------------------------------------SCRIPTS----------------------------------------------------------------->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxl1Uezke-RlYrYdd2Cb0HmWL8AHXsyMxVV4TIWdYSHrWXjjdLxUph0RYJ1V7gxAPrK/exec'
+                const form = document.forms['formsubmit']
+            
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => alert("Thanks for reviewing us...!"))
+                    .catch(error => console.error('Error!', error.message))
+                })
+    </script>
+
+</body>
+</html>
